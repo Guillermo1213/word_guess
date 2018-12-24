@@ -1,0 +1,11 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url(architecture-automobile-cars-63294.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
