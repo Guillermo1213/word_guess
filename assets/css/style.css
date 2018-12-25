@@ -1,11 +1,23 @@
-body, html {
-    height: 100%;
+html,
+body,
+header,
+
+.view {
+  height: 100%;
+  background-image: url('https://github.com/Guillermo1213/word_guess/blob/master/assets/images/architecture-automobile-cars-63294.jpg?raw=true');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.bg {
-    background-image: url(architecture-automobile-cars-63294.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+}
+.title {
+    font-family: 'Bungee Shade', cursive;
+    color: aliceblue;
+    font-size: 8vw;
 }
