@@ -16,11 +16,7 @@
     
     function word_generate() {
 
-        //Task#1: Select random var from car_models
-
         current_word = car_models[Math.floor(Math.random() * car_models.length)];
-
-        //Task#2: Split rand in to individual letters
 
         split_word = current_word.split("");
 
@@ -28,7 +24,7 @@
 
         for (var i=0; i < blanks; i++) {
             word.push("_");
-            }
+        }
         
         document.getElementById("word_blanks").innerHTML = " " + word.join(" ");
         
@@ -45,7 +41,6 @@
         wrong_guess = [];
         word = [];
         word_generate()
-
     }
     
     function corect() {
@@ -72,62 +67,67 @@
     }
 
     function check(letters) {
-    var letterInWord = false;
-    //if the generated randomword is equal to the letter entered... then variable is true
-    for (var i = 0; i < blanks; i++) {
-        if (current_word[i] == letters) {
-                letterInWord = true;
-            }
-        }
-    //if letterInWord (false)
-    if (letterInWord) {
-    //check each letter to see if it matches word
+
+        var letterInWord = false;
+    
         for (var i = 0; i < blanks; i++) {
             if (current_word[i] == letters) {
-                word[i] = letters;
+                    letterInWord = true;
+                }
+            }
+    
+        if (letterInWord) {
+            for (var i = 0; i < blanks; i++) {
+                if (current_word[i] == letters) {
+                    word[i] = letters;
+                }
             }
         }
-    }
-    //otherwise, push the incorrect guess in the wrong guesses section, and reduce remaining guesses
-    else {
-    wrong_guess.push(letters);
-    guesses_remaining--;
-    }
+        
+        else {
+            wrong_guess.push(letters);
+            guesses_remaining--;
+        }
     console.log(word);
     }
     
     function result() {
+
         console.log("wins:" + wins + "| guesses left:" + guesses_remaining)
     
-        //if WON...then alert, play audio, display image and reset new round
         if (split_word.toString() == word.toString()) {
+
             wins++;
+
             corect()
+
             new_game()
-            //display wins on screen
+
             document.getElementById("win_counter").innerHTML = "Wins: " + wins;
-    
-            //if LOST...then alert and reset new round
+
         } else if (guesses_remaining === 0) {
+
             new_game()
+
             document.getElementById("img").src = "./assets/images/fail.jpg"
         }
-        //display losses on screen && guesses remaining countdown
+
         document.getElementById("word_blanks").innerHTML = "  " + word.join(" ");
+
         document.getElementById("guess_counter").innerHTML = " " + guesses_remaining;
     }
   
     word_generate()
 
     document.onkeyup = function (event) {
+
         var guesses = String.fromCharCode(event.keyCode).toLowerCase();
-        //check to see if guess entered matches value of random word
+        
         check(guesses);
-        //process wins/loss 
+       
         result();
-        //store player guess in console for reference 
+        
         console.log(guesses);
     
-        //display/store incorrect letters on screen
         document.getElementById("letter_display").innerHTML = "  " + wrong_guess.join(" ");
     }
