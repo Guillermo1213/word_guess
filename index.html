@@ -17,15 +17,61 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-12 title">
+                <div class="title">
                     Guess-A-Car
                 </div>
             </div>
         </div>
         
-        <div class="">
+        <div id="main_console" class="row">
+            <div class="col-7 guessed_img">
+                <img src="https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="img" class="img-fluid" alt="Guessed Image">
+            </div>
+            <div class="col-5 game_center">
+                <div class="row header">
+                    <h2 class="col-12">
+                        Press any key to start !
+                    </h2>
+                </div>
+                <div class="row">
+                    <h3 id="win_counter"class="col-12">
+                        <!-- Wins  -->
+                    </h3>
+                </div>
+                <div class="row word">
+                   <h3 class="col-12">
+                        Current Car: 
+                    </h3> 
+                </div>
+                <div class="row">
+                    <div id="word_blanks" class="col-12">
+                        <!-- Word Blanks -->
+                    </div>
+                </div>
+                <div class="row guesses">
+                    <h3 class="col-12">
+                        Number of Guesses Remaining:
+                    </h3>
+                </div> 
+                <div id="guess_counter" class="row">
+                    <h3 class="col-12">
+                        <!-- Number of guesses remaining -->
+                    </h3>
+                </div>
+                <div class="row used_letters">
+                    <h3 class="col-12">
+                         Letters Already Used:
+                    </h3>
+                </div>
+                <div id="letter_display"class="row">
+                    <div class="col-12">
+                        <!-- Letters used -->
+                    </div>
+                </div>
+            </div>
+        </div>
         
     </div>   
 </body>
-
+<script src="assets\javascript\game.js"></script>
 </html>

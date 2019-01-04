@@ -5,19 +5,88 @@ header,
 .view {
   height: 100%;
   background-image: url('https://github.com/Guillermo1213/word_guess/blob/master/assets/images/architecture-automobile-cars-63294.jpg?raw=true');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center center;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-content: center;
+
 }
 .title {
     font-family: 'Bungee Shade', cursive;
     color: aliceblue;
     font-size: 8vw;
+}
+
+#main_console {
+    background-color: rgba(255,255,255, 0.3);
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    color: aliceblue;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        text-align: center;
+}
+
+.guessed_img {
+    padding: 1rem;
+    /* border-right: dashed #f0f8ff 2px; */
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.game_center {
+    padding: 1rem;
+    float: right;
+    flex-shrink: 1;
+    border-left: dashed #f0f8ff 2px;
+    text-align: center;
+
+}
+
+h2, h3 {
+    color: aliceblue;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#word_blanks{
+    font-size: 16px;
+    color: aliceblue;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#guess_counter{
+    display: inline;
+}
+
+#letter_display{
+    display: inline;
+}
+
+img{
+    border: double #f0f8ff 2px;
 }
